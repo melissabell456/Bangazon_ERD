@@ -1,8 +1,7 @@
 'use strict';
 
 const faker = require('faker');
-// let randomDate = faker.date("%Y-%m-%d");
-// console.log(randomDate, "what THEFUCK is date");
+const moment = require('moment');
 
 module.exports.generateCustData = () => {
   let customers = [];
@@ -11,7 +10,7 @@ module.exports.generateCustData = () => {
     let firstName = faker.name.firstName();
     console.log(firstName);
     let lastName = faker.name.lastName();
-    let createDate = faker.date.past(10, '2010-01-01');
+    let createDate = faker.date.past(10);
 // generated customer attributes values are pushed to the customers array
     customers.push({
       firstName,
